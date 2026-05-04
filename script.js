@@ -121,7 +121,7 @@ function updateButtons() {
     $('.play-button').attr("disabled", "disabled");
     $('.play-button').css("background-color", "#D3D3D3");
     // Console warning example, displays warning for each button giving reasoning
-    console.warning("Play button is disabled due to values being too low");
+    console.warn("Play button is disabled due to values being too low");
     disabled.push("Play Button");
   }
   else{
@@ -131,7 +131,7 @@ function updateButtons() {
   if((pet_info['happiness'] - 3 < 0) || (pet_info['weight'] - 5 <= 0)){
     $('.exercise-button').attr("disabled", "disabled");
     $('.exercise-button').css("background-color", "#D3D3D3");
-    console.warning("Exercise button is disabled due to values being too low");
+    console.warn("Exercise button is disabled due to values being too low");
     disabled.push("Exercise Button");
   }
   else{
@@ -152,7 +152,7 @@ function updateButtons() {
   // ending group prints to console
   console.group("Disabled Buttons");
   for(var i = 0; i < disabled.length; i++){
-    console.info(disabled[i] + ", ");
+    console.log(disabled[i] + ", ");
   }
   console.groupEnd("Disabled Buttons");
   // Maybe Type Error Example, requires testing to see if it actually errors or not

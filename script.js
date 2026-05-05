@@ -17,6 +17,11 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
   $('.play-button').click(clickedPlayButton);
   $('.exercise-button').click(clickedExerciseButton);
   $('.train-button').click(clickedTrainButton);
+
+  // Cause a violation error
+  const start = Date.now();
+  while (Date.now() - start < 3000) {
+  }
 })
 
 // Change values passed through to checkAndUpdatePetInfoInHtml based on button pressed
@@ -181,6 +186,6 @@ function updateImage() {
   else
     img.src = "./images/rem.png";
   // 404 Example, incorrect path so it cannot find the image
-  fetch('./rem.png')
+  fetch('./rem.png');
   console.log("Image Updated");
 }

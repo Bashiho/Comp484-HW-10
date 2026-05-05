@@ -27,9 +27,6 @@ function clickedTreatButton() {
   checkAndUpdatePetInfoInHtml("treat", 5, 5, 0);
   console.log("Gave Treat");
   $("<p>Gave Treat, </p>").prependTo(".history-list");
-  const start = Date.now();
-  while (Date.now() - start < 3000) {
-  }
 }
 
 function clickedPlayButton() {

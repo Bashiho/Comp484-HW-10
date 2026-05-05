@@ -19,9 +19,6 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
   $('.train-button').click(clickedTrainButton);
 
   // Cause a violation error
-  const start = Date.now();
-  while (Date.now() - start < 3000) {
-  }
 })
 
 // Change values passed through to checkAndUpdatePetInfoInHtml based on button pressed
@@ -30,6 +27,9 @@ function clickedTreatButton() {
   checkAndUpdatePetInfoInHtml("treat", 5, 5, 0);
   console.log("Gave Treat");
   $("<p>Gave Treat, </p>").prependTo(".history-list");
+  const start = Date.now();
+  while (Date.now() - start < 3000) {
+  }
 }
 
 function clickedPlayButton() {
